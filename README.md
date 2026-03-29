@@ -9,7 +9,6 @@
 ---
 
 ## 📸 Preview
-> **Tip:** Add a screenshot of your app here to make the profile look elite! 
 > <img width="2454" height="1233" alt="image" src="https://github.com/user-attachments/assets/c2edbca7-487e-4207-ac10-38f428e61aab" />
 
 `
