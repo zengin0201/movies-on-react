@@ -108,7 +108,7 @@ body {
   position: absolute;
   top: 15px;
   right: 15px;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   padding: 5px 10px;
   border-radius: 6px;
   font-size: 12px;
@@ -140,18 +140,25 @@ body {
   padding: 50px;
   color: var(--text-dim);
 }
+
 .modal-overlay {
   position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.9);
-  display: flex; justify-content: center; align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1000;
   backdrop-filter: blur(5px);
 }
 
 .modal-content {
   background: var(--card-bg);
-  width: 90%; max-width: 800px;
+  width: 90%;
+  max-width: 800px;
   border-radius: 20px;
   position: relative;
   border: 1px solid #25262b;
@@ -159,30 +166,61 @@ body {
 }
 
 .modal-body {
-  display: flex; padding: 30px; gap: 30px;
+  display: flex;
+  padding: 30px;
+  gap: 30px;
 }
 
 .modal-body img {
-  width: 250px; border-radius: 12px; object-fit: cover;
+  width: 250px;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
-.modal-info h2 { margin-top: 0; font-size: 28px; }
+.modal-info h2 {
+  margin-top: 0;
+  font-size: 28px;
+}
 
-.modal-meta { display: flex; gap: 15px; margin-bottom: 20px; color: var(--text-dim); }
+.modal-meta {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  color: var(--text-dim);
+}
 
-.rating { color: var(--accent); font-weight: bold; }
+.rating {
+  color: var(--accent);
+  font-weight: bold;
+}
 
-.plot { line-height: 1.6; color: #ccc; margin: 20px 0; }
+.plot {
+  line-height: 1.6;
+  color: #ccc;
+  margin: 20px 0;
+}
 
 .close-btn {
-  position: absolute; top: 15px; right: 20px;
-  background: none; border: none; color: white;
-  font-size: 35px; cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 
@@ -220,14 +258,19 @@ body {
   width: 50px;
   height: 50px;
   border: 5px solid rgba(255, 255, 255, 0.1);
-  border-top: 5px solid var(--accent); /* Твой красный цвет */
+  border-top: 5px solid var(--accent);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .fav-badge {
@@ -260,6 +303,7 @@ body {
   border-color: var(--accent);
   background: rgba(0, 0, 0, 0.8);
 }
+
 .modal-header-row {
   display: flex;
   justify-content: space-between;
@@ -282,8 +326,9 @@ body {
   color: black;
   border-color: var(--accent);
 }
+
 .poster-wrapper {
-  position: relative; /* Чтобы кнопка позиционировалась внутри */
+  position: relative;
 }
 
 .fav-btn {
@@ -311,9 +356,152 @@ body {
   background: rgba(0, 0, 0, 0.8);
 }
 
-/* Когда фильм в избранном — делаем звезду золотой */
 .fav-btn.active {
   color: #ffc107;
   border-color: #ffc107;
   text-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px; 
+    align-items: center;
+  }
+
+  .logo {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  
+  .search-box {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 2px 5px;
+  }
+  
+  .search-box input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .container {
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+
+  
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+  }
+
+  .poster-wrapper {
+    height: 280px;
+  }
+
+  
+  .modal-content {
+    width: 95%; 
+    max-height: 90vh; 
+    margin: 20px;
+  }
+
+ 
+  .modal-body {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    overflow-y: auto;
+  }
+
+  
+  .modal-body img {
+    width: 100%;
+    max-width: 200px; 
+    margin: 0 auto;
+    height: auto;
+  }
+
+  
+  .modal-header-row {
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .modal-info h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+
+  
+  .modal-meta, .genre, .plot, .actors {
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+  
+  .close-btn {
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+  }
+
+  .poster-wrapper {
+    height: 200px;
+  }
+
+  .movie-info {
+    padding: 10px;
+  }
+  
+  .movie-info h3 {
+    font-size: 13px;
+    margin: 5px 0 0;
+  }
+
+  .movie-info span {
+    font-size: 9px;
+  }
+  
+  .movie-year {
+    font-size: 10px;
+    padding: 3px 6px;
+    top: 10px;
+    right: 10px;
+  }
+
+  
+  .fav-badge, .fav-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .load-more-btn {
+    padding: 12px 30px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
 }
