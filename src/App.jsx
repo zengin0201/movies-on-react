@@ -182,7 +182,7 @@ function App() {
                       : "☆ Add to Favorites"}
                   </button>
                 </div>
-                <h2>{selectedMovie.Title}</h2>
+                
                 <div className="modal-meta">
                   <span className="rating">⭐ {selectedMovie.imdbRating}</span>
                   <span>{selectedMovie.Runtime}</span>
