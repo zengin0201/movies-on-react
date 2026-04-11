@@ -41,6 +41,6 @@
 
 1. **Clone the project**
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/movie-hub.git](https://github.com/YOUR_USERNAME/movie-hub.git)
+   git clone [https://github.com/zengin0201/movie-hub.git](https://github.com/zengin0201/movie-hub.git)
 
 ## You can check it on website : https://movies-on-react.vercel.app/ 
